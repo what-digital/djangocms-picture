@@ -8,6 +8,3 @@ class PictureForm(forms.ModelForm):
     class Meta:
         model = Picture
         fields = '__all__'
-        widgets = {
-            'caption_text': forms.Textarea(attrs={'rows': 2}),
-        }
