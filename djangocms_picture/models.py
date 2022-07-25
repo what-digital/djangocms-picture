@@ -15,6 +15,7 @@ from djangocms_attributes_field.fields import AttributesField
 from easy_thumbnails.files import get_thumbnailer
 from filer.fields.image import FilerImageField
 from filer.models import ThumbnailOption
+from djangocms_text_ckeditor.fields import HTMLField
 
 
 # add setting for picture alignment, renders a class or inline styles
@@ -117,7 +118,7 @@ class AbstractPicture(CMSPlugin):
         max_length=255,
         help_text=_('Aligns the image according to the selected option.'),
     )
-    caption_text = models.TextField(
+    caption_text = HTMLField(
         verbose_name=_('Caption text'),
         blank=True,
         null=True,
