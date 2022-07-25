@@ -36,7 +36,7 @@
 
 {# start render figure/figcaption #}
 {% if instance.caption_text %}
-        <figcaption>{{ instance.caption_text }}</figcaption>
+        <figcaption>{{ instance.caption_text|safe }}</figcaption>
     </figure>
 {% endif %}
 {# end render figure/figcaption #}
